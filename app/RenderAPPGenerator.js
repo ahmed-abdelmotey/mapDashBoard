@@ -54,15 +54,15 @@ define([
 				field: RendererField,
 				uniqueValueInfos: [{
 						value: "3",
-						symbol: getUniqueValueSymbol("../img/icon7.png", "#F97C5A")
+						symbol: getUniqueValueSymbol("./img/icon7.png", "#F97C5A")
 					},
 					{
 						value: "4",
-						symbol: getUniqueValueSymbol("../img/images.png", "#884614")
+						symbol: getUniqueValueSymbol("./img/images.png", "#884614")
 					},
 					{
 						value: "5",
-						symbol: getUniqueValueSymbol("../img/Cars.png", "#56B2D6")
+						symbol: getUniqueValueSymbol("./img/Cars.png", "#56B2D6")
 					}]
 			});
 		}
