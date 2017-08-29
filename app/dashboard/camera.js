@@ -35,12 +35,12 @@ Vue.component('camera', {
       title:"الكاميرات",
       brief:"",
       videoUrl:[
-        "../../vid/2.mp4",
-        "../../vid/1.mp4",
+        "/vid/2.mp4",
+        "/vid/1.mp4",
       ],
       videoSplash:[
-        "../../vid/vid2.jpg",
-        "../../vid/vid1.jpg",
+        "/vid/vid2.jpg",
+        "/vid/vid1.jpg",
       ]
     }
   },
