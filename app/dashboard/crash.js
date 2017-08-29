@@ -89,17 +89,17 @@ Vue.component('crash', {
       switch (this.filterList){
         case "pedestrian":
           this.title = "حوادث المشاه";
-          this.icon = "../../img/man.png";
+          this.icon = "../img/man.png";
           cat = 3;
         break;
         case "cyclist":
           this.title = "حوادث الدراجات";
-          this.icon = "../../img/bike.png"
+          this.icon = "../img/bike.png"
           cat = 4;
         break;
         case "motorist":
           this.title = "حوادث السيارات";
-          this.icon = "../../img/car.png"
+          this.icon = "../img/car.png"
           cat = 5;
         break;
       }
