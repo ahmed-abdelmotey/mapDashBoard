@@ -105,7 +105,7 @@ define([
           layer : cameraLayer,
           features: res.cameras.value
         }
-				cameraLayer.renderer = RenderAPPGenerator("",settings.cameraLayerUrl, "./img/Camera1.png", "#D13470");
+				cameraLayer.renderer = RenderAPPGenerator("",settings.cameraLayerUrl, "img/Camera1.png", "#D13470");
 
         window.appSettings.traffic = {
           layer : trafficLayer,
