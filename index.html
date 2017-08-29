@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>Manhattan Skyscraper Explorer</title>
+
+
+  <!-- Load AMD modules: the application itself and D3  -->
+  <script>
+    var dojoConfig = {
+      packages: [{
+        name: "d3",
+        location: location.pathname.replace(/\/[^/]+$/, "") + "lib",
+        main: "d3"
+      }, {
+        name: "app",
+        location: location.pathname.replace(/\/[^/]+$/, "") + "app"
+      }],
+      async: true
+    };
+  </script>
+  <!--  Modernizer  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>  
+
+  <!--  Vue.js  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js"></script>  
+  <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.4"></script>
+  <script src="./node_modules/lodash/lodash.min.js"></script>
+
+
+  <!--  Color Picker Component  -->
+  <script src="./lib/vue-color.min.js"></script>  
+  <script src="./lib/three.js"></script>  
+  <script>
+    var Slider = VueColor.Slider
+  </script>
+  
+  <!-- Style Sheet  -->
+  <link rel="stylesheet" href="./dist/css/style.css">
+
+  <!-- ArcGIS JavaScript API 4.4  -->
+  <script src="https://js.arcgis.com/4.4/"></script>
+  <link rel="stylesheet" href="https://jsdev.arcgis.com/4.4/esri/css/main.css">
+
+  <!-- initialize vue components  -->
+  <script src="./app/dashboard/top-menu.js"></script>
+  <script src="./app/dashboard/camera.js"></script>
+  <script src="./app/dashboard/traffic.js"></script>
+  <script src="./app/dashboard/crash.js"></script>
+  <script src="./app/dashboard/analysis-modals/set-definition-expression.js"></script>
+  <script src="./app/dashboard/analysis-modals/set-renderer.js"></script>
+  <script src="./app/dashboard/analysis.js"></script>
+
+  <!-- Initialize App -->
+  <script src="app/init.js"></script>
+</head>
+
+<body>
+
+  <!--  map view  -->
+  <div id="viewDiv"></div>
+  
+  <!--  vue root element  -->
+  <div id="card-wrapper">
+    <component :is="currentList" @navigate="navigateLists($event)" :filter-list="filterCrashesList"></component>
+  </div>
+
+</body>
+
+</html>
